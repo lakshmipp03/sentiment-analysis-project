@@ -49,7 +49,6 @@ def handle_login():
 
     password = request.form["password"]
 
-    # Default login
     if username == "admin" and password == "admin123":
 
         session["user"] = username
@@ -70,7 +69,7 @@ def home():
     return render_template("index.html")
 
 
-# ---------------- SINGLE REVIEW PREDICTION ---------------- #
+# ---------------- PREDICTION ---------------- #
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -78,19 +77,15 @@ def predict():
     if "user" not in session:
         return redirect("/")
 
-    # User input
     text = request.form["text"]
 
-    # Clean text
     cleaned_text = clean_text(text)
 
-    # Convert to vector
     vector_input = vectorizer.transform([cleaned_text])
 
-    # Predict sentiment
     prediction = model.predict(vector_input)[0]
 
-    # Emotion detection
+    # Emotion
     if prediction == "positive":
         emotion = "😊 Happy"
 
@@ -100,7 +95,7 @@ def predict():
     else:
         emotion = "😐 Neutral"
 
-    # Pie chart
+    # Pie Chart
     labels = ["Positive", "Negative", "Neutral"]
 
     sizes = [0, 0, 0]
@@ -124,7 +119,6 @@ def predict():
 
     plt.title("Sentiment Analysis Result")
 
-    # Save chart
     plt.savefig("static/chart.png")
 
     plt.close()
@@ -175,7 +169,7 @@ def predict():
     )
 
 
-# ---------------- CSV BULK ANALYSIS ---------------- #
+# ---------------- CSV UPLOAD ---------------- #
 
 @app.route("/upload", methods=["POST"])
 def upload():
@@ -185,12 +179,10 @@ def upload():
 
     file = request.files["file"]
 
-    # Read CSV
     df = pd.read_csv(file)
 
     results = []
 
-    # Analyze reviews
     for review in df["review"]:
 
         cleaned = clean_text(review)
@@ -287,7 +279,7 @@ def dashboard():
 
     conn.close()
 
-    # Create graph
+    # Dashboard graph
     labels = ["Positive", "Negative", "Neutral"]
 
     values = [positive, negative, neutral]
