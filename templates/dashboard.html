@@ -7,47 +7,135 @@
 
     <style>
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
 
-            font-family: Arial;
-            background: linear-gradient(to right, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.65),
+                    rgba(0,0,0,0.65)
+                ),
+
+                url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1974&auto=format&fit=crop');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
             color: white;
+
             text-align: center;
+
+            min-height: 100vh;
+
             padding-top: 50px;
+
+            padding-bottom: 50px;
+        }
+
+        h1 {
+
+            font-size: 42px;
+
+            margin-bottom: 30px;
         }
 
         .container {
 
-            width: 80%;
+            width: 90%;
+
             margin: auto;
         }
 
         .card {
 
-            background: white;
-            color: black;
+            background: rgba(255,255,255,0.15);
+
+            backdrop-filter: blur(10px);
+
+            color: white;
+
             padding: 30px;
+
             margin: 20px;
-            border-radius: 15px;
+
+            border-radius: 20px;
+
             display: inline-block;
-            width: 220px;
+
+            width: 230px;
+
             font-size: 24px;
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+
+            margin-bottom: 15px;
+        }
+
+        .graph-box {
+
+            background: rgba(255,255,255,0.15);
+
+            backdrop-filter: blur(10px);
+
+            width: 75%;
+
+            margin: auto;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            margin-top: 40px;
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
         img {
 
-            margin-top: 30px;
+            margin-top: 20px;
+
             border-radius: 15px;
         }
 
         button {
 
             background: #667eea;
+
             color: white;
+
             border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
+
+            padding: 12px 24px;
+
+            border-radius: 10px;
+
             cursor: pointer;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+
+            margin-top: 30px;
+        }
+
+        button:hover {
+
+            background: #5a67d8;
+
+            transform: scale(1.05);
         }
 
     </style>
@@ -94,15 +182,17 @@
 
     </div>
 
-    <br><br>
+    <div class="graph-box">
 
-    <h2>Sentiment Analytics Graph</h2>
+        <h2>Sentiment Analytics Graph</h2>
 
-    <img
-        src="{{ graph }}"
-        width="600">
+        <img
+            src="{{ graph }}"
+            width="650">
 
-    <br><br>
+    </div>
+
+    <br>
 
     <a href="/home">
 

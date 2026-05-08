@@ -5,10 +5,16 @@ import pickle
 import matplotlib.pyplot as plt
 import pandas as pd
 import sqlite3
+import nltk
 
 from wordcloud import WordCloud
 
 from preprocess import clean_text
+
+# Download NLTK resources
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 
 app = Flask(__name__)
 
@@ -43,6 +49,7 @@ def handle_login():
 
     password = request.form["password"]
 
+    # Default login
     if username == "admin" and password == "admin123":
 
         session["user"] = username
@@ -63,7 +70,7 @@ def home():
     return render_template("index.html")
 
 
-# ---------------- PREDICTION ---------------- #
+# ---------------- SINGLE REVIEW PREDICTION ---------------- #
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -71,15 +78,19 @@ def predict():
     if "user" not in session:
         return redirect("/")
 
+    # User input
     text = request.form["text"]
 
+    # Clean text
     cleaned_text = clean_text(text)
 
+    # Convert to vector
     vector_input = vectorizer.transform([cleaned_text])
 
+    # Predict sentiment
     prediction = model.predict(vector_input)[0]
 
-    # Emotion
+    # Emotion detection
     if prediction == "positive":
         emotion = "😊 Happy"
 
@@ -113,6 +124,7 @@ def predict():
 
     plt.title("Sentiment Analysis Result")
 
+    # Save chart
     plt.savefig("static/chart.png")
 
     plt.close()
@@ -163,7 +175,7 @@ def predict():
     )
 
 
-# ---------------- CSV UPLOAD ---------------- #
+# ---------------- CSV BULK ANALYSIS ---------------- #
 
 @app.route("/upload", methods=["POST"])
 def upload():
@@ -173,10 +185,12 @@ def upload():
 
     file = request.files["file"]
 
+    # Read CSV
     df = pd.read_csv(file)
 
     results = []
 
+    # Analyze reviews
     for review in df["review"]:
 
         cleaned = clean_text(review)
@@ -233,7 +247,7 @@ def history():
     )
 
 
-# ---------------- DASHBOARD ---------------- #
+# ---------------- DASHBOARD PAGE ---------------- #
 
 @app.route("/dashboard")
 def dashboard():
@@ -273,12 +287,32 @@ def dashboard():
 
     conn.close()
 
+    # Create graph
+    labels = ["Positive", "Negative", "Neutral"]
+
+    values = [positive, negative, neutral]
+
+    plt.figure(figsize=(6,4))
+
+    plt.bar(labels, values)
+
+    plt.title("Sentiment Distribution")
+
+    plt.xlabel("Sentiment")
+
+    plt.ylabel("Count")
+
+    plt.savefig("static/dashboard_graph.png")
+
+    plt.close()
+
     return render_template(
         "dashboard.html",
         total=total,
         positive=positive,
         negative=negative,
-        neutral=neutral
+        neutral=neutral,
+        graph="static/dashboard_graph.png"
     )
 
 
@@ -295,4 +329,5 @@ def logout():
 # ---------------- RUN APP ---------------- #
 
 if __name__ == "__main__":
+
     app.run(debug=True)

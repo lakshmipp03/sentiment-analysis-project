@@ -3,82 +3,182 @@
 
 <head>
 
-    <title>AI-Powered E-Commerce Review Analytics Platform</title>
+    <title>AI-Powered Sentiment Analysis Tool</title>
 
     <style>
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
 
-            font-family: Arial;
-            background: linear-gradient(to right, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.65),
+                    rgba(0,0,0,0.65)
+                ),
+                url('https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1974&auto=format&fit=crop');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
             color: white;
             text-align: center;
-            padding-top: 50px;
+            min-height: 100vh;
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
 
         .container {
 
-            background: white;
-            color: black;
-            width: 75%;
+            background: rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(12px);
+
+            width: 80%;
+
             margin: auto;
-            padding: 30px;
-            border-radius: 15px;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+
+            color: #f1f1f1;
         }
 
         textarea {
 
-            width: 80%;
-            height: 120px;
-            padding: 10px;
+            width: 85%;
+
+            height: 140px;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 12px;
+
             font-size: 16px;
+
+            resize: none;
+        }
+
+        textarea:focus {
+
+            outline: none;
         }
 
         button {
 
             background: #667eea;
+
             color: white;
+
             border: none;
-            padding: 12px 25px;
+
+            padding: 12px 24px;
+
             font-size: 16px;
-            border-radius: 8px;
+
+            border-radius: 10px;
+
             cursor: pointer;
-            margin: 5px;
+
+            margin: 8px;
+
+            transition: 0.3s;
         }
 
         button:hover {
 
             background: #5a67d8;
-        }
 
-        h1 {
-
-            margin-bottom: 20px;
+            transform: scale(1.05);
         }
 
         .result {
 
-            margin-top: 25px;
-            font-size: 24px;
+            margin-top: 30px;
+
+            background: rgba(255,255,255,0.15);
+
+            padding: 20px;
+
+            border-radius: 15px;
         }
 
         img {
 
             margin-top: 20px;
-            border-radius: 10px;
+
+            border-radius: 15px;
         }
 
         table {
 
+            width: 90%;
+
             margin: auto;
-            margin-top: 20px;
+
+            margin-top: 25px;
+
             border-collapse: collapse;
+
+            background: white;
+
+            color: black;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        th {
+
+            background: #667eea;
+
+            color: white;
         }
 
         th, td {
 
-            border: 1px solid black;
-            padding: 10px;
+            padding: 12px;
+
+            border: 1px solid #ddd;
+        }
+
+        hr {
+
+            margin: 40px 0;
+
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        h2 {
+
+            margin-top: 20px;
         }
 
     </style>
@@ -89,7 +189,13 @@
 
     <div class="container">
 
-        <h1>AI-Powered E-Commerce Review Analytics Platform</h1>
+        <h1>AI-Powered Sentiment Analysis Tool</h1>
+
+        <p class="subtitle">
+
+            Smart Customer Review Analytics Platform
+
+        </p>
 
         <!-- Review Analysis -->
 
@@ -97,7 +203,7 @@
 
             <textarea
                 name="text"
-                placeholder="Enter customer product review..."></textarea>
+                placeholder="Enter customer review here..."></textarea>
 
             <br><br>
 
@@ -113,25 +219,25 @@
 
         {% if prediction %}
 
-            <div class="result">
+        <div class="result">
 
-                <h2>Prediction: {{ prediction }}</h2>
+            <h2>Prediction: {{ prediction }}</h2>
 
-                <h2>Emotion: {{ emotion }}</h2>
+            <h2>Emotion: {{ emotion }}</h2>
 
-                <img
-                    src="{{ chart }}"
-                    width="300">
+            <img
+                src="{{ chart }}"
+                width="320">
 
-                <br><br>
+            <br><br>
 
-                <h2>Word Cloud</h2>
+            <h2>Word Cloud</h2>
 
-                <img
-                    src="static/wordcloud.png"
-                    width="500">
+            <img
+                src="static/wordcloud.png"
+                width="500">
 
-            </div>
+        </div>
 
         {% endif %}
 
@@ -140,6 +246,8 @@
         <!-- CSV Upload -->
 
         <h2>Upload Customer Reviews CSV</h2>
+
+        <br>
 
         <form
             action="/upload"
@@ -162,33 +270,33 @@
 
         {% if bulk_results %}
 
-            <hr>
+        <hr>
 
-            <h2>Bulk Review Analysis</h2>
+        <h2>Bulk Review Analysis</h2>
 
-            <table>
+        <table>
 
-                <tr>
+            <tr>
 
-                    <th>Review</th>
+                <th>Review</th>
 
-                    <th>Prediction</th>
+                <th>Prediction</th>
 
-                </tr>
+            </tr>
 
-                {% for item in bulk_results %}
+            {% for item in bulk_results %}
 
-                <tr>
+            <tr>
 
-                    <td>{{ item.review }}</td>
+                <td>{{ item.review }}</td>
 
-                    <td>{{ item.prediction }}</td>
+                <td>{{ item.prediction }}</td>
 
-                </tr>
+            </tr>
 
-                {% endfor %}
+            {% endfor %}
 
-            </table>
+        </table>
 
         {% endif %}
 
