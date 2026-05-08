@@ -22,16 +22,23 @@
                     rgba(0,0,0,0.65),
                     rgba(0,0,0,0.65)
                 ),
+
                 url('https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1974&auto=format&fit=crop');
 
             background-size: cover;
+
             background-position: center;
+
             background-attachment: fixed;
 
             color: white;
+
             text-align: center;
+
             min-height: 100vh;
+
             padding-top: 40px;
+
             padding-bottom: 40px;
         }
 
@@ -202,10 +209,19 @@
         <form action="/predict" method="POST">
 
             <textarea
+                id="reviewText"
                 name="text"
                 placeholder="Enter customer review here..."></textarea>
 
             <br><br>
+
+            <button
+                type="button"
+                onclick="startVoice()">
+
+                🎤 Start Voice Input
+
+            </button>
 
             <button type="submit">
 
@@ -345,6 +361,28 @@
         </a>
 
     </div>
+
+    <script>
+
+        function startVoice() {
+
+            var recognition =
+                new webkitSpeechRecognition();
+
+            recognition.lang = "en-US";
+
+            recognition.start();
+
+            recognition.onresult = function(event) {
+
+                document.getElementById(
+                    "reviewText"
+                ).value =
+                event.results[0][0].transcript;
+            };
+        }
+
+    </script>
 
 </body>
 
