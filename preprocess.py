@@ -1,24 +1,25 @@
 import re
 import nltk
 
+# Download NLTK resources
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-# Download required files
-nltk.download('punkt')
-nltk.download('stopwords')
-
-# Load stopwords
+# Stopwords
 stop_words = set(stopwords.words('english'))
 
-# Function to clean text
+# Clean text function
 def clean_text(text):
 
-    # Convert to lowercase
+    # Lowercase
     text = text.lower()
 
     # Remove special characters
-    text = re.sub(r'[^a-zA-Z ]', '', text)
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
 
     # Tokenization
     words = word_tokenize(text)
@@ -27,7 +28,9 @@ def clean_text(text):
     filtered_words = []
 
     for word in words:
+
         if word not in stop_words:
+
             filtered_words.append(word)
 
     # Join words
