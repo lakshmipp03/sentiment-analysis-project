@@ -3,11 +3,12 @@
 
 <head>
 
-    <title>AI Sentiment Analysis Tool</title>
+    <title>AI-Powered E-Commerce Review Analytics Platform</title>
 
     <style>
 
         body {
+
             font-family: Arial;
             background: linear-gradient(to right, #667eea, #764ba2);
             color: white;
@@ -16,15 +17,17 @@
         }
 
         .container {
+
             background: white;
             color: black;
-            width: 70%;
+            width: 75%;
             margin: auto;
             padding: 30px;
             border-radius: 15px;
         }
 
         textarea {
+
             width: 80%;
             height: 120px;
             padding: 10px;
@@ -32,6 +35,7 @@
         }
 
         button {
+
             background: #667eea;
             color: white;
             border: none;
@@ -39,32 +43,41 @@
             font-size: 16px;
             border-radius: 8px;
             cursor: pointer;
+            margin: 5px;
         }
 
         button:hover {
+
             background: #5a67d8;
         }
 
         h1 {
+
             margin-bottom: 20px;
         }
 
         .result {
+
             margin-top: 25px;
             font-size: 24px;
         }
 
         img {
+
             margin-top: 20px;
+            border-radius: 10px;
         }
 
         table {
+
             margin: auto;
             margin-top: 20px;
             border-collapse: collapse;
         }
 
         th, td {
+
+            border: 1px solid black;
             padding: 10px;
         }
 
@@ -76,20 +89,22 @@
 
     <div class="container">
 
-        <h1>AI Sentiment Analysis Tool</h1>
+        <h1>AI-Powered E-Commerce Review Analytics Platform</h1>
 
-        <!-- Single Prediction -->
+        <!-- Review Analysis -->
 
         <form action="/predict" method="POST">
 
             <textarea
                 name="text"
-                placeholder="Enter your review here..."></textarea>
+                placeholder="Enter customer product review..."></textarea>
 
             <br><br>
 
             <button type="submit">
-                Analyze Sentiment
+
+                Analyze Review
+
             </button>
 
         </form>
@@ -124,7 +139,7 @@
 
         <!-- CSV Upload -->
 
-        <h2>Upload CSV File</h2>
+        <h2>Upload Customer Reviews CSV</h2>
 
         <form
             action="/upload"
@@ -136,7 +151,9 @@
             <br><br>
 
             <button type="submit">
+
                 Upload & Analyze
+
             </button>
 
         </form>
@@ -147,13 +164,16 @@
 
             <hr>
 
-            <h2>Bulk Analysis Results</h2>
+            <h2>Bulk Review Analysis</h2>
 
-            <table border="1">
+            <table>
 
                 <tr>
+
                     <th>Review</th>
+
                     <th>Prediction</th>
+
                 </tr>
 
                 {% for item in bulk_results %}
@@ -173,6 +193,18 @@
         {% endif %}
 
         <br><br>
+
+        <!-- Navigation Buttons -->
+
+        <a href="/dashboard">
+
+            <button>
+
+                Dashboard
+
+            </button>
+
+        </a>
 
         <a href="/history">
 

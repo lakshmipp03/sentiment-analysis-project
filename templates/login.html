@@ -1,3 +1,6 @@
+# Replace FULL `templates/login.html`
+
+```html
 <!DOCTYPE html>
 <html>
 
@@ -7,38 +10,88 @@
 
     <style>
 
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            font-family: Arial;
-            background: linear-gradient(to right, #667eea, #764ba2);
-            text-align: center;
-            padding-top: 100px;
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5)
+            ),
+            url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1974&auto=format&fit=crop');
+
+            background-size: cover;
+            background-position: center;
         }
 
         .login-box {
 
-            background: white;
-            width: 350px;
-            margin: auto;
-            padding: 30px;
-            border-radius: 15px;
+            width: 380px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 34px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: #f1f1f1;
         }
 
         input {
 
-            width: 80%;
-            padding: 10px;
-            margin: 10px;
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
         }
 
         button {
 
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
             background: #667eea;
             color: white;
-            border: none;
-            padding: 10px 20px;
+            font-size: 18px;
             cursor: pointer;
-            border-radius: 8px;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #5a67d8;
+            transform: scale(1.03);
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #ddd;
         }
 
     </style>
@@ -49,36 +102,61 @@
 
     <div class="login-box">
 
-        <h1>Login</h1>
+        <h1>AI Review Analytics</h1>
+
+        <p>
+            AI-Powered E-Commerce Review Analytics Platform
+        </p>
 
         <form action="/login" method="POST">
 
             <input
                 type="text"
                 name="username"
-                placeholder="Username"
+                placeholder="Enter Username"
                 required>
-
-            <br>
 
             <input
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder="Enter Password"
                 required>
 
-            <br><br>
-
             <button type="submit">
-
                 Login
-
             </button>
 
         </form>
+
+        <div class="footer-text">
+            Developed using AI, NLP & Machine Learning
+        </div>
 
     </div>
 
 </body>
 
 </html>
+```
+
+# AFTER THIS
+
+Save file:
+
+```bash
+Ctrl + S
+```
+
+Run project:
+
+```bash
+python app.py
+```
+
+Now your login page will have:
+
+* Full-screen background image
+* Glassmorphism login card
+* Modern UI
+* Professional AI-platform look
+* Smooth hover effects
