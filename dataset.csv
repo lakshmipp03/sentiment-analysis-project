@@ -52,3 +52,360 @@ Average product,neutral
 It is normal,neutral
 Moderate experience,neutral
 I have no opinion,neutral
+text,sentiment
+
+I love this app,positive
+This product is amazing,positive
+Very good experience,positive
+Excellent quality,positive
+I feel happy using this,positive
+This is fantastic,positive
+Awesome support,positive
+Great application,positive
+I really like this,positive
+Very nice product,positive
+Good service,positive
+Wonderful experience,positive
+Best app ever,positive
+I enjoyed this a lot,positive
+Perfect quality,positive
+This is good,positive
+Very useful app,positive
+I am satisfied,positive
+Excellent customer support,positive
+Highly recommended,positive
+Fast delivery,positive
+Very smooth experience,positive
+Superb product,positive
+Easy to use,positive
+Loved the interface,positive
+This app works perfectly,positive
+I appreciate this service,positive
+Very comfortable to use,positive
+Everything is perfect,positive
+This made my work easier,positive
+The quality is excellent,positive
+Brilliant experience,positive
+Fantastic application,positive
+This looks amazing,positive
+I had a great experience,positive
+Very impressive,positive
+This is really nice,positive
+I am very happy,positive
+Absolutely loved it,positive
+This is one of the best apps,positive
+Nice customer service,positive
+Very reliable app,positive
+The design is beautiful,positive
+Excellent performance,positive
+I feel good about this,positive
+Amazing features,positive
+This app is helpful,positive
+Very clean interface,positive
+Top quality product,positive
+Good packaging,positive
+Everything works fine,positive
+I love the features,positive
+This saved my time,positive
+Outstanding product,positive
+Very efficient system,positive
+I enjoyed using this app,positive
+Really good application,positive
+Excellent response time,positive
+I had no issues,positive
+Very convenient service,positive
+Worth the money,positive
+The app is fantastic,positive
+Customer support was helpful,positive
+Very responsive app,positive
+This is brilliant,positive
+I am impressed,positive
+The service is quick,positive
+The product quality is great,positive
+Amazing customer experience,positive
+Very user friendly,positive
+It exceeded my expectations,positive
+I am loving this app,positive
+Good functionality,positive
+Very fast application,positive
+The app runs smoothly,positive
+I really enjoyed this,positive
+One of my favorite apps,positive
+Very good product quality,positive
+Excellent shopping experience,positive
+I had a pleasant experience,positive
+The interface is simple,positive
+This app is wonderful,positive
+Everything was smooth,positive
+I am happy with the purchase,positive
+Best experience so far,positive
+I would buy again,positive
+This is awesome,positive
+Very good platform,positive
+I trust this service,positive
+Great user experience,positive
+The product works well,positive
+The delivery was fast,positive
+I got exactly what I wanted,positive
+Very professional service,positive
+I had fun using this,positive
+The support team is amazing,positive
+It works perfectly fine,positive
+Absolutely fantastic,positive
+Very polished app,positive
+I am enjoying this platform,positive
+Highly efficient product,positive
+This app is excellent,positive
+
+I hate this app,negative
+Worst experience ever,negative
+Very bad service,negative
+Terrible quality,negative
+I feel angry,negative
+This is horrible,negative
+Awful application,negative
+Very poor support,negative
+I dislike this product,negative
+Bad customer service,negative
+Worst app ever,negative
+This is frustrating,negative
+Poor performance,negative
+I regret using this,negative
+Waste of money,negative
+Very disappointing,negative
+The app keeps crashing,negative
+I had a terrible experience,negative
+Bad quality product,negative
+This is not good,negative
+Extremely slow app,negative
+I am unhappy,negative
+Very annoying service,negative
+Worst support team,negative
+I don't like this app,negative
+The interface is confusing,negative
+This product is useless,negative
+I had many issues,negative
+Customer support ignored me,negative
+The app is buggy,negative
+Poor packaging,negative
+Delivery was delayed,negative
+Very bad experience,negative
+The quality is terrible,negative
+This made me angry,negative
+Absolutely horrible,negative
+Nothing works properly,negative
+I am dissatisfied,negative
+Worst product quality,negative
+The app freezes often,negative
+Very unreliable application,negative
+I had a bad experience,negative
+Too many errors,negative
+I want a refund,negative
+The service is pathetic,negative
+This app is broken,negative
+Very frustrating app,negative
+The system is slow,negative
+Bad experience overall,negative
+The product stopped working,negative
+This is disappointing,negative
+I expected better,negative
+Very poor app design,negative
+The app is hard to use,negative
+This service is useless,negative
+I wasted my time,negative
+The response is very slow,negative
+I feel disappointed,negative
+Poor customer experience,negative
+This app failed badly,negative
+Very low quality,negative
+I had problems using this,negative
+The support is terrible,negative
+Worst shopping experience,negative
+This app is annoying,negative
+Bad delivery service,negative
+Not worth the money,negative
+The app lags a lot,negative
+I am not satisfied,negative
+The product arrived damaged,negative
+This is the worst app,negative
+Very poor functionality,negative
+The app is unstable,negative
+Terrible customer support,negative
+Nothing is working,negative
+The experience was awful,negative
+This product is bad,negative
+The app is very slow,negative
+I dislike the interface,negative
+Very disappointing quality,negative
+Worst service ever,negative
+The system crashes frequently,negative
+This is unacceptable,negative
+The app consumes too much battery,negative
+The product is defective,negative
+The delivery was terrible,negative
+Very stressful experience,negative
+The app has many bugs,negative
+Customer service was rude,negative
+I had a horrible time,negative
+This platform is unreliable,negative
+I regret buying this,negative
+The app is confusing,negative
+Too many technical issues,negative
+Absolutely terrible,negative
+The product is low quality,negative
+The app disappointed me,negative
+This was a bad decision,negative
+I am extremely unhappy,negative
+
+It is okay,neutral
+Average experience,neutral
+Normal product,neutral
+This is fine,neutral
+Nothing special,neutral
+Moderate quality,neutral
+Acceptable service,neutral
+The app works normally,neutral
+Average application,neutral
+No opinion about this,neutral
+It is decent,neutral
+This product is average,neutral
+Not bad not good,neutral
+It works as expected,neutral
+The experience was normal,neutral
+Average support,neutral
+Okay product,neutral
+Fair enough,neutral
+It is manageable,neutral
+This is acceptable,neutral
+The quality is average,neutral
+The app is okay,neutral
+Nothing impressive,neutral
+It does the job,neutral
+The service is fine,neutral
+I think it is okay,neutral
+Average functionality,neutral
+No major issues,neutral
+The delivery was okay,neutral
+This app is decent,neutral
+The product is neither good nor bad,neutral
+The interface is simple,neutral
+I have mixed feelings,neutral
+This is standard,neutral
+Typical experience,neutral
+The service was average,neutral
+It works fine sometimes,neutral
+Not much to say,neutral
+It is usable,neutral
+The product quality is normal,neutral
+The experience was moderate,neutral
+I feel neutral about this,neutral
+The support was average,neutral
+The app is ordinary,neutral
+Nothing exciting here,neutral
+The features are basic,neutral
+Average customer service,neutral
+The app performance is okay,neutral
+It is just fine,neutral
+This seems normal,neutral
+good,positive
+very good,positive
+good app,positive
+good product,positive
+good service,positive
+good experience,positive
+nice,positive
+very nice,positive
+nice app,positive
+nice product,positive
+nice experience,positive
+amazing,positive
+awesome,positive
+excellent,positive
+perfect,positive
+great,positive
+love it,positive
+i love it,positive
+happy,positive
+very happy,positive
+cool app,positive
+best app,positive
+super app,positive
+beautiful app,positive
+helpful app,positive
+easy to use,positive
+fast app,positive
+smooth experience,positive
+excellent support,positive
+fantastic service,positive
+wonderful product,positive
+brilliant app,positive
+liked it,positive
+works perfectly,positive
+really good,positive
+so good,positive
+very useful,positive
+satisfied,positive
+worth it,positive
+nice quality,positive
+
+bad,negative
+very bad,negative
+bad app,negative
+bad product,negative
+bad service,negative
+bad experience,negative
+worst,negative
+worst app,negative
+worst product,negative
+worst service,negative
+hate it,negative
+i hate it,negative
+terrible,negative
+awful,negative
+poor quality,negative
+slow app,negative
+useless app,negative
+horrible experience,negative
+annoying app,negative
+very slow,negative
+not good,negative
+not nice,negative
+waste of money,negative
+frustrating app,negative
+boring app,negative
+broken app,negative
+buggy app,negative
+lagging app,negative
+confusing app,negative
+disappointing,negative
+very disappointing,negative
+really bad,negative
+so bad,negative
+unhappy,negative
+angry,negative
+poor support,negative
+not worth it,negative
+terrible service,negative
+bad quality,negative
+hate this app,negative
+
+okay,neutral
+fine,neutral
+average,neutral
+normal,neutral
+decent,neutral
+acceptable,neutral
+moderate,neutral
+not bad,neutral
+not great,neutral
+okay app,neutral
+okay product,neutral
+average app,neutral
+average product,neutral
+normal experience,neutral
+nothing special,neutral
+it works,neutral
+usable,neutral
+manageable,neutral
+fair enough,neutral
+simple app,neutral
