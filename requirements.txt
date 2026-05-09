@@ -1,8 +1,9 @@
 flask
 flask-session
 pandas
-matplotlib
-wordcloud
 scikit-learn
+matplotlib
 nltk
+wordcloud
+langdetect
 gunicorn

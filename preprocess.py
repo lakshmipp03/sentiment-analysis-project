@@ -9,7 +9,7 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-# Stopwords
+# English stopwords
 stop_words = set(stopwords.words('english'))
 
 # Clean text function
@@ -18,13 +18,19 @@ def clean_text(text):
     # Lowercase
     text = text.lower()
 
-    # Remove special characters
-    text = re.sub(r'[^a-zA-Z\s]', '', text)
+    # REMOVE ONLY SPECIAL SYMBOLS
+    # KEEP multilingual letters
+    text = re.sub(r'[^\w\s]', '', text)
 
-    # Tokenization
-    words = word_tokenize(text)
+    try:
 
-    # Remove stopwords
+        # Tokenization
+        words = word_tokenize(text)
+
+    except:
+
+        return text
+
     filtered_words = []
 
     for word in words:
@@ -33,7 +39,6 @@ def clean_text(text):
 
             filtered_words.append(word)
 
-    # Join words
     cleaned_text = " ".join(filtered_words)
 
     return cleaned_text

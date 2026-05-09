@@ -204,7 +204,7 @@
 
         </p>
 
-        <!-- Review Analysis -->
+        <!-- REVIEW ANALYSIS -->
 
         <form action="/predict" method="POST">
 
@@ -231,7 +231,7 @@
 
         </form>
 
-        <!-- Prediction Result -->
+        <!-- RESULT -->
 
         {% if prediction %}
 
@@ -240,6 +240,10 @@
             <h2>Prediction: {{ prediction }}</h2>
 
             <h2>Emotion: {{ emotion }}</h2>
+
+            <h2>Fake Review Detection: {{ fake_review }}</h2>
+
+            <h2>Detected Language: {{ language }}</h2>
 
             <img
                 src="{{ chart }}"
@@ -259,7 +263,7 @@
 
         <hr>
 
-        <!-- CSV Upload -->
+        <!-- CSV UPLOAD -->
 
         <h2>Upload Customer Reviews CSV</h2>
 
@@ -282,7 +286,7 @@
 
         </form>
 
-        <!-- Bulk Results -->
+        <!-- BULK RESULTS -->
 
         {% if bulk_results %}
 
@@ -318,7 +322,7 @@
 
         <br><br>
 
-        <!-- Navigation Buttons -->
+        <!-- NAVIGATION -->
 
         <a href="/dashboard">
 
@@ -361,6 +365,8 @@
         </a>
 
     </div>
+
+    <!-- VOICE INPUT -->
 
     <script>
 
